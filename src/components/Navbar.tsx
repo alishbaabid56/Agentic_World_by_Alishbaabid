@@ -28,7 +28,6 @@ export default function Navbar() {
         <NavLink href="/technology">Technology</NavLink>
         <NavLink href="/analysis">Analysis</NavLink>
         <NavLink href="/pricing">Pricing</NavLink>
-        <NavLink href="/services">Services</NavLink>
         <NavLink href="/contact">Contact Us</NavLink>
       
 
@@ -50,7 +49,7 @@ export default function Navbar() {
           <NavLink href="/technology" onClick={() => setIsOpen(false)}>  Technology</NavLink>
           <NavLink href="/analysis" onClick={() => setIsOpen(false)}>Analysis</NavLink>
           <NavLink href="/pricing" onClick={() => setIsOpen(false)}>Pricing</NavLink>
-          <NavLink href="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
+         
           <NavLink href="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
           
             <button className="mt-2 px-5 py-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-full font-semibold hover:opacity-90 transition duration-300">
