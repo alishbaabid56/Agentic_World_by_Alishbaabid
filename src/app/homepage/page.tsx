@@ -36,7 +36,7 @@ export default function HomePage() {
       <section className="flex flex-col items-center text-center px-6 py-20 w-full max-w-4xl animate-fade-in">
         {/* Animated Heading */}
         <h1 className="text-4xl sm:text-5xl xs:text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text animate-slide-down">
-          Welcome to Agentic World
+          Welcome to Agentia World
         </h1>
 
         {/* Animated Paragraph */}

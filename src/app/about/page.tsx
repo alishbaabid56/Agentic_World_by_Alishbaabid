@@ -35,7 +35,7 @@ export default function About() {
       {/* Header Section */}
       <section className="text-center px-4 py-16">
         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-          About Agentic AI
+          About Agentia World
         </h1>
         <p className="mt-4 text-base md:text-lg text-gray-300 max-w-3xl mx-auto animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
           Agentic AI is at the forefront of artificial intelligence, harnessing the power of deep learning, automation, and cognitive intelligence.

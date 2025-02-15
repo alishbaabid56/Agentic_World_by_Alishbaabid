@@ -18,7 +18,7 @@ export default function Navbar() {
         </div>
         {/* Gradient text for brand name */}
         <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-          Agentic AI
+          Agentia World
         </h1>
       </div>
 
