@@ -4,6 +4,7 @@ import About from "./about/page";
 import NeuralCapabilities from "./neuralcapabilities/page";
 import Pricing from "./pricing/page";
 import Services from "./services/page";
+import Contact from "./contact/page";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <NeuralCapabilities />
       <Pricing/>
       <Services/>
+      <Contact/>
     
     </div>
   );

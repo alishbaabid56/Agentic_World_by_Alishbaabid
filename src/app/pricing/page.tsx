@@ -1,10 +1,35 @@
 
 
+"use client";
+import { useEffect, useRef, useState } from "react";
+
 export default function Pricing() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 } // Triggers animation when 30% of section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="bg-black min-h-screen text-white">
-
-
       {/* Header Section */}
       <section className="text-center px-6 py-16">
         <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
@@ -15,8 +40,13 @@ export default function Pricing() {
         </p>
       </section>
 
-      {/* Pricing Cards */}
-      <section className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto px-6 py-10">
+      {/* Pricing Cards with Scroll Animation */}
+      <section
+        ref={sectionRef}
+        className={`grid md:grid-cols-3 gap-8 max-w-5xl mx-auto px-6 py-10 transition-all duration-1000 ${
+          isVisible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-10"
+        }`}
+      >
         {/* Basic Plan */}
         <div className="p-6 rounded-lg bg-gray-900 shadow-lg hover:shadow-purple-500 transition-shadow duration-300 text-center">
           <h2 className="text-2xl font-semibold text-white">Basic</h2>
@@ -67,6 +97,6 @@ export default function Pricing() {
           </button>
         </div>
       </section>
-    </div>
-  );
+    </div>
+  );
 }
